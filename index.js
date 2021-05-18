@@ -43,7 +43,7 @@ class CountdownTimer {
 
 const cTimer =  new CountdownTimer({
   selector: '#timer-1',
-  targetDate: new Date('Jul 17, 2021'),
+  targetDate: new Date('Jul 17, 2021'), // дату змінено на майбутню
 });
 
 cTimer.start();
