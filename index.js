@@ -3,6 +3,11 @@ class CountdownTimer {
         this.IntervalId = null;
         this.targetDate = targetDate;
         this.selector = selector;
+
+        this.daysEl = document.querySelector(`${this.selector} span[data-value="days"]`);
+        this.hoursEl = document.querySelector(`${this.selector} span[data-value="hours"]`);
+        this.minsEl = document.querySelector(`${this.selector} span[data-value="mins"]`);
+        this.secsEl = document.querySelector(`${this.selector} span[data-value="secs"]`);
     }
 
     start() {
@@ -33,10 +38,10 @@ class CountdownTimer {
     }
 
     printTime({ days, hours, mins, secs }) {
-        document.querySelector(`${this.selector} span[data-value="days"]`).textContent = days;
-        document.querySelector(`${this.selector} span[data-value="hours"]`).textContent = hours;
-        document.querySelector(`${this.selector} span[data-value="mins"]`).textContent = mins;
-        document.querySelector(`${this.selector} span[data-value="secs"]`).textContent = secs;
+        this.daysEl.textContent = days;
+        this.hoursEl = hours;
+        this.minsEl.textContent = mins;
+        this.secsEl.textContent = secs;
     }
     
 }
